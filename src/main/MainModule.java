@@ -10,7 +10,7 @@ public class MainModule {
         Scanner sc = new Scanner(System.in);
         IPolicyService service = new InsuranceServiceImpl();
 
-        System.out.println("🚀 Welcome to the Insurance Policy Manager!");
+        System.out.println(" Welcome to the Insurance Policy Manager!");
 
         while (true) {
             System.out.println("\nChoose an option:");
@@ -26,18 +26,18 @@ public class MainModule {
                 case 1:
                     System.out.println("Enter Policy ID, Name, and Coverage:");
                     Policy p1 = new Policy(sc.nextInt(), sc.next(), sc.nextDouble());
-                    System.out.println(service.createNewPolicy(p1) ? "✅ Policy added." : "❌ Couldn't add policy.");
+                    System.out.println(service.createNewPolicy(p1) ? " Policy added." : " Couldn't add policy.");
                     break;
                 case 2:
                     System.out.print("Enter Policy ID: ");
                     Policy found = service.findPolicyById(sc.nextInt());
-                    System.out.println(found != null ? found : "❌ Policy not found.");
+                    System.out.println(found != null ? found : " Policy not found.");
                     break;
                 case 3:
                     System.out.println("Fetching all policies...");
                     List<Policy> all = service.fetchAllInsurancePlans();
                     if (all.isEmpty()) {
-                        System.out.println("😶 No policies found.");
+                        System.out.println(" No policies found.");
                     } else {
                         all.forEach(System.out::println);
                     }
@@ -45,19 +45,19 @@ public class MainModule {
                 case 4:
                     System.out.println("Enter ID, New Name, and New Coverage:");
                     Policy p2 = new Policy(sc.nextInt(), sc.next(), sc.nextDouble());
-                    System.out.println(service.updateExistingPolicy(p2) ? "✅ Updated!" : "❌ Update failed.");
+                    System.out.println(service.updateExistingPolicy(p2) ? " Updated!" : " Update failed.");
                     break;
                 case 5:
                     System.out.print("Enter Policy ID to delete: ");
-                    System.out.println(service.removePolicy(sc.nextInt()) ? "🗑️ Deleted." : "❌ Deletion failed.");
+                    System.out.println(service.removePolicy(sc.nextInt()) ? " Deleted." : " Deletion failed.");
                     break;
                 case 6:
-                    System.out.println("👋 Bye! Thanks for using the manager.");
+                    System.out.println(" Bye! Thanks for using the manager.");
                     sc.close();
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("❌ Invalid choice. Try again.");
+                    System.out.println(" Invalid choice. Try again.");
             }
         }
     }
