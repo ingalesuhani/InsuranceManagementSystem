@@ -13,12 +13,17 @@ This is a simple Java-based Insurance Management System built for the Hexaware T
 
 ##  Project Structure
 
-InsuranceManagementSystem/ │
-├── dao/ # Interfaces and DB interaction logic 
-├── entity/ # Data models (User, Client, Claim, etc.) 
-├── exception/ # Custom user-defined exceptions 
-├── util/ # Utility classes for DB connection and properties 
-└── main/ # Main module to run the application
+InsuranceManagementSystem/
+├── dao/
+# Interfaces and DB interaction logic 
+├── entity/ 
+# Data models (User, Client, Claim, etc.) 
+├── exception/ 
+# Custom user-defined exceptions 
+├── util/ 
+# Utility classes for DB connection and properties 
+└── main/
+# Main module to run the application
 
 
 ## ⚙️ Technologies Used
